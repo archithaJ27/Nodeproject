@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(9, 9, 31); /* Dark Blue for Background */
+    color: white; /* White Text for Contrast */
+    font-family: Arial, sans-serif; /*font-family for Clean Font */
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: white; /* White background for content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
