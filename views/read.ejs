@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body style="background-color: rgb(9, 9, 31); color: white;">
+    <div class="container mt-3">
+        <a href="/" class="btn btn-info">Home</a>
+    </div>
+    <div class="container mt-5">
+        <h4>Student List</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Degree</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(student => { %>
+                    <tr>
+                        <td><%= student.rollNo %></td>
+                        <td><%= student.name %></td>
+                        <td><%= student.degree %></td>
+                        <td><%= student.city %></td>
+                        <td>
+                            <a href="/edit/<%= student._id %>" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="/delete/<%= student._id %>" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
